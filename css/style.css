@@ -2,8 +2,14 @@ body{
 background-color: #FCFCFA;
 margin: 0px;
 padding: 0px;
-font-family: sans-serif;
+font-family: helvetica;
 }
+
+@font-face {
+    font-family: helvetica;
+    src: url(../fonts/HelveticaNeue-Medium.otf);
+}
+
 
 .hero-banner{
 max-width: 100%;
