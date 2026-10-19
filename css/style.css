@@ -1,0 +1,38 @@
+body{
+background-color: #FCFCFA;
+margin: 0px;
+padding: 0px;
+font-family: sans-serif;
+}
+
+.hero-banner{
+max-width: 100%;
+position: relative;
+
+}
+
+.hero-banner img{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    }
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 6%;
+  transform: translateY(-50%);
+  color: white;
+  z-index: 2;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 35px;
+  background-color: #FCFCFA;
+  color: black;
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 1px;
+  transition: background-color 0.3s ease;
+}
