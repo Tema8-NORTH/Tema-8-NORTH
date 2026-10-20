@@ -34,7 +34,22 @@ margin-top: 0px;
 }
 
 
-.fourtimestwo {
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 0px;
+}
+
+.image-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-grid img:first-child {
+    grid-column: span 7;
+}
+
+.image-grid img:last-child {
     grid-column: span 2;
-    grid-row: span 2;
 }
