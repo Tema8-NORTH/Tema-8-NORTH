@@ -42,3 +42,17 @@ position: relative;
   border-radius: 1px;
   transition: background-color 0.3s ease;
 }
+
+.product-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    cursor: pointer;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+}
