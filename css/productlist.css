@@ -1,0 +1,38 @@
+
+.product-list-page {
+    max-width: 80%;
+    margin: 60px auto;
+}
+
+.productlist {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.product-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.product {
+    border: 1px solid #ddd;
+    background-color: #fff;
+    padding: 15px;
+}
+
+.product img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+}
+
+.product h3 {
+    margin: 10px 0 5px;
+}
+
+@media (max-width: 768px) {
+    .productlist {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
