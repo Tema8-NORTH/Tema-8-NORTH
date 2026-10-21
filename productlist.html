@@ -1,51 +1,101 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NORTH</title>
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/productlist.css">
-<script src="js/productlist.js" defer></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NORTH | Products</title>
+
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/productlist.css" />
+
+    <script src="js/productlist.js" defer></script>
   </head>
-<body>
+
+  <body>
     <header class="header">
-  <div class="header-center">
-    <a href="index.html" class="logo-link">
-      <img class="logo" src="imgs/logo.png" alt="NORTH" />
-    </a>
+      <div class="header-center">
+        <a href="index.html" class="logo-link">
+          <img class="logo" src="imgs/logo.png" alt="NORTH" />
+        </a>
+        <nav class="menu">
+          <a href="productlist.html?category=clothing">Clothing</a>
+          <a href="productlist.html?category=footwear">Footwear</a>
+          <a href="productlist.html?category=accessories">Accessories</a>
+          <a href="news.html">News</a>
+          <a href="about.html">About</a>
+        </nav>
+      </div>
 
-    <nav class="menu">
-      <a href="productlist.html">Clothing</a>
-      <a href="#">Footwear</a>
-      <a href="#">Accessories</a>
-      <a href="#">News</a>
-      <a href="#">About</a>
-    </nav>
-  </div>
+      <button class="burger" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
 
+    <main class="product-list-page">
+      <a class="back-link" href="index.html">← BACK</a>
 
-    <button class="burger" aria-label="Open menu" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </div>
-</header>
+      <h1 id="page-title">ALL PRODUCTS</h1>
 
+      <div class="catalog-layout">
+        <aside class="filters">
+          <h2>FILTERS</h2>
 
+          <details open class="filter-section">
+            <summary>Gender</summary>
+            <label><input type="checkbox" name="gender" value="men" /> Men</label>
+            <label><input type="checkbox" name="gender" value="women" /> Women</label>
+            <label><input type="checkbox" name="gender" value="unisex" /> Unisex</label>
+          </details>
 
-<main class="product-list-page">
-    <h1>ALL PRODUCTS</h1>
+          <details open class="filter-section">
+            <summary>Brands</summary>
+            <div id="brand-filters" class="filter-options">
+              <p>Loading brands...</p>
+            </div>
+          </details>
 
-    <div class="productlist"></div>
-</main>
+          <details open class="filter-section">
+            <summary>Size</summary>
+            <p class="filter-note">Size filtering is not available in this product API.</p>
+          </details>
 
-<script src="js/productlist.js" defer></script>
+          <details open class="filter-section">
+            <summary>Color</summary>
+            <div id="color-filters" class="filter-options">
+              <p>Loading colors...</p>
+            </div>
+          </details>
 
+          <button type="button" id="clear-filters" class="clear-filters">CLEAR FILTERS</button>
+        </aside>
 
+        <section class="catalog">
+          <div class="catalog-toolbar">
+            <p id="product-count">Loading products...</p>
 
-</body>
+            <label class="sort-control">
+              Sort by:
+              <select id="sort-products">
+                <option value="featured">Featured</option>
+                <option value="title-asc">Name: A–Z</option>
+                <option value="price-asc">Price: Low to high</option>
+                <option value="price-desc">Price: High to low</option>
+              </select>
+            </label>
+          </div>
+
+          <div id="product-grid" class="productlist">
+            <p class="loading-message">Loading products...</p>
+          </div>
+
+          <p id="empty-message" class="empty-message" hidden>No products match your filters. Try changing your selection.</p>
+
+          <p id="error-message" class="error-message" hidden>Products could not be loaded. Please refresh the page and try again.</p>
+        </section>
+      </div>
+    </main>
+  </body>
 </html>

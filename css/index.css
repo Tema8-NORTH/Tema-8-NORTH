@@ -1,55 +1,200 @@
-.productlist {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+/* PRODUCT SECTION */
+.product-list {
+  width: 80%;
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-top: 0;
 }
 
+/* PRODUCT GRID */
+.productlist {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+/* PRODUCT CARDS */
+.productlist {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.product {
+  box-sizing: border-box;
+  min-width: 0;
+  height: 100%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background: #fff;
+  overflow-wrap: anywhere;
+}
+
+/* Produktbilleder */
 .product img {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: contain;
 }
 
+/* Produkttekst */
 .product h3 {
-  margin: 10px 0 5px;
+  margin: 10px 0 12px;
+  line-height: 1.25;
 }
 
-.product-list{
-max-width: 80%;
-margin: 0 auto;
-margin-top: 0px;
+.product p {
+  margin: 0 0 12px;
+  line-height: 1.4;
 }
 
-.right{
-    max-width: 90%;
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    margin-top: 40px;
-    margin-bottom: 0px;
-}
-.right a{
-    color: black;
-    font-size: 14px;
+/* Sørg for, at produktkortene ikke skubber til banneret */
+.product-list {
+  max-width: 80%;
+  margin: 0 auto 60px;
 }
 
+/* VIEW ALL */
+.right {
+  width: 90%;
+  max-width: 1400px;
+  margin: 40px auto 0;
+  display: flex;
+  justify-content: flex-end;
+}
 
+.right a {
+  color: black;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+/* IMAGE STRIP */
 .image-grid {
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    gap: 0px;
+  display: grid;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+  gap: 0;
+  margin-top: 40px;
 }
 
 .image-grid img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .image-grid img:first-child {
-    grid-column: span 7;
+  grid-column: span 7;
 }
 
 .image-grid img:last-child {
-    grid-column: span 2;
+  grid-column: span 2;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .product-list {
+    width: 90%;
+  }
+
+  .productlist {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .product {
+    height: 380px;
+  }
+
+  .right {
+    width: 90%;
+  }
+}
+/* ==============================
+   NORTH — PRODUCT HOVER EFFECTS
+================================ */
+
+/* Smooth transition on product cards */
+.product {
+  position: relative;
+  transition:
+    transform 300ms ease,
+    box-shadow 300ms ease,
+    border-color 300ms ease;
+}
+
+/* Smooth image zoom */
+.product img {
+  transition: transform 450ms cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+/* Hover on the entire product card */
+@media (hover: hover) and (pointer: fine) {
+  .product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    border-color: #b5b5b5;
+  }
+
+  .product:hover img {
+    transform: scale(1.045);
+  }
+
+  /* Subtle product title interaction */
+  .product h3 {
+    transition: opacity 250ms ease;
+  }
+
+  .product:hover h3 {
+    opacity: 0.7;
+  }
+}
+
+/* ==============================
+   NORTH — SHOP NOW BUTTON
+================================ */
+
+.hero-text .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+  transition:
+    background-color 250ms ease,
+    color 250ms ease,
+    border-color 250ms ease,
+    transform 250ms ease;
+}
+
+/* Elegant black-and-white hover */
+@media (hover: hover) and (pointer: fine) {
+  .hero-text .btn:hover {
+    background-color: #fff;
+    color: #111;
+    border-color: #111;
+    transform: translateY(-2px);
+  }
+}
+
+/* Keyboard accessibility */
+.hero-text .btn:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 4px;
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .product,
+  .product img,
+  .product h3,
+  .hero-text .btn {
+    transition: none;
+  }
 }

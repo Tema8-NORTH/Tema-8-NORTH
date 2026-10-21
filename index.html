@@ -1,120 +1,101 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NORTH</title>
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/footer.css"
-<script src="js/productlist.js" defer></script>
+
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <script src="js/productlist.js" defer></script>
   </head>
-<body>
-    
-<header class="header">
-  <div class="header-center">
-    <a href="index.html" class="logo-link">
-      <img class="logo" src="imgs/logo.png" alt="NORTH" />
-    </a>
 
-    <nav class="menu">
-      <a href="productlist.html">Clothing</a>
-      <a href="#">Footwear</a>
-      <a href="#">Accessories</a>
-      <a href="#">News</a>
-      <a href="#">About</a>
-    </nav>
-  </div>
+  <body>
+    <header class="header">
+      <div class="header-center">
+        <a href="index.html" class="logo-link">
+          <img class="logo" src="imgs/logo.png" alt="NORTH" />
+        </a>
 
+        <nav class="menu">
+          <a href="productlist.html?category=clothing">Clothing</a>
+          <a href="productlist.html?category=footwear">Footwear</a>
+          <a href="productlist.html?category=accessories">Accessories</a>
+          <a href="news.html">News</a>
+          <a href="about.html">About</a>
+        </nav>
+      </div>
 
-    <button class="burger" aria-label="Open menu" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </div>
-</header>
+      <button class="burger" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
 
-<div class="hero-banner">
-    <img src="imgs/banner.png" alt="NORTH">
+    <main>
+      <section class="hero-banner">
+        <img src="imgs/banner.png" alt="NORTH new season collection" />
 
-    <div class="hero-text">
-        <p>NEW SEASON</p>
-        <h1>TIMELESS <br> ESSENTIALS</h1>
-        <p>Clothing, Footwear & Accessories <br>
-        for a contemporary everyday.</p>
-        <a href="#" class="btn">SHOP NOW →</a>
-    </div>
-</div>
+        <div class="hero-text">
+          <p>NEW SEASON</p>
+          <h1>TIMELESS<br />ESSENTIALS</h1>
+          <p>
+            Clothing, Footwear &amp; Accessories<br />
+            for a contemporary everyday.
+          </p>
+          <a href="productlist.html?category=all" class="btn">SHOP NOW →</a>
+        </div>
+      </section>
 
-<div>
+      <section class="featured-section">
+        <div class="right">
+          <a href="productlist.html?category=all">VIEW ALL →</a>
+        </div>
 
-  <div class="right"><p>VIEW ALL →</p></div>
-<section class="product-list">
-  <a href="productlist.html" class="right"></a>
-    <div class="productlist"></div>
-</section>
-</div>
+        <div class="product-list">
+          <div class="productlist" id="featured-products">
+            <p class="loading-message">Loading products...</p>
+          </div>
+        </div>
+      </section>
 
-<div class="image-grid">  
-<img src="imgs/bannerbtm1.png" alt="Image 1">
-<img src="imgs/bannerbtm2.png" alt="Image 2">
+      <div class="image-grid">
+        <img src="imgs/bannerbtm2.webp" alt="NORTH campaign" />
+        <img src="imgs/bannerbtm2.png" alt="NORTH fashion details" />
+      </div>
+    </main>
 
+    <footer class="footer">
+      <div class="newsletter">
+        <h2>JOIN OUR NEWSLETTER</h2>
 
-</div>
-<footer class="footer">
+        <form class="newsletter-form">
+          <input type="email" placeholder="YOUR EMAIL" aria-label="Your email" required />
+          <button type="submit" aria-label="Subscribe">→</button>
+        </form>
+      </div>
 
-    <div class="newsletter">
-      <h2>JOIN OUR NEWSLETTER</h2>
+      <div class="socials">
+        <a href="#"><i class="fa-brands fa-tiktok"></i><span>TIKTOK</span></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i><span>INSTAGRAM</span></a>
+        <a href="#"><i class="fa-brands fa-facebook-f"></i><span>FACEBOOK</span></a>
+        <a href="#"><i class="fa-brands fa-pinterest-p"></i><span>PINTEREST</span></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i><span>YOUTUBE</span></a>
+        <a href="#"><i class="fa-brands fa-spotify"></i><span>SPOTIFY</span></a>
+      </div>
 
-      <form class="newsletter-form">
-        <input type="email" placeholder="YOUR EMAIL" required>
-        <button type="submit">→</button>
-      </form>
-    </div>
-
-    <div class="socials">
-      <a href="#">
-        <i class="fa-brands fa-tiktok"></i>
-        <span>TIKTOK</span>
-      </a>
-
-      <a href="#">
-        <i class="fa-brands fa-instagram"></i>
-        <span>INSTAGRAM</span>
-      </a>
-
-      <a href="#">
-        <i class="fa-brands fa-facebook-f"></i>
-        <span>FACEBOOK</span>
-      </a>
-
-      <a href="#">
-        <i class="fa-brands fa-pinterest-p"></i>
-        <span>PINTEREST</span>
-      </a>
-
-      <a href="#">
-        <i class="fa-brands fa-youtube"></i>
-        <span>YOUTUBE</span>
-      </a>
-
-      <a href="#">
-        <i class="fa-brands fa-spotify"></i>
-        <span>SPOTIFY</span>
-      </a>
-    </div>
-
-
-    <div class="footer-bottom">
-      <a href="#">COOKIES SETTINGS</a>
-      <a href="#">USE OF AI</a>
-      <a href="#">PRIVACY AND COOKIES POLICY</a>
-      <a href="#">TERMS OF USE</a>
-      <a href="#">LEGAL GUARANTEE</a>
-    </div>
-
-  </footer>
-</body>
+      <div class="footer-bottom">
+        <a href="#">COOKIES SETTINGS</a>
+        <a href="#">USE OF AI</a>
+        <a href="#">PRIVACY AND COOKIES POLICY</a>
+        <a href="#">TERMS OF USE</a>
+        <a href="#">LEGAL GUARANTEE</a>
+      </div>
+    </footer>
+  </body>
 </html>
