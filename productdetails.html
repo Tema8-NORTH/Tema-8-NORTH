@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>NORTH | Product Details</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/productdetails.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+
+    <script src="js/productdetails.js" defer></script>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header-center">
+        <a href="index.html" class="logo-link">
+          <img class="logo" src="imgs/logo.png" alt="NORTH" />
+        </a>
+        <nav class="menu">
+          <a href="productlist.html?category=clothing">Clothing</a>
+          <a href="productlist.html?category=footwear">Footwear</a>
+          <a href="productlist.html?category=accessories">Accessories</a>
+          <a href="news.html">News</a>
+          <a href="about.html">About</a>
+        </nav>
+      </div>
+
+      <button class="burger" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <!-- PRODUCT DETAILS -->
+    <main class="details-page">
+      <a href="javascript:history.back()" class="back-link">← BACK</a>
+
+      <p id="loading-message" class="status-message">Loading product...</p>
+      <p id="error-message" class="status-message error-message" hidden>Product could not be loaded. Please return to the product list and try again.</p>
+
+      <section id="product-details" class="product-details" hidden>
+        <div class="main-product">
+          <div class="main-product-image">
+            <img id="main-image" src="" alt="" />
+          </div>
+
+          <div class="product-information">
+            <p id="product-category" class="detail-category"></p>
+            <h1 id="product-title"></h1>
+            <p id="product-price" class="detail-price"></p>
+            <p id="product-description" class="detail-description"></p>
+
+            <div class="size-section">
+              <p class="size-label">SIZE</p>
+
+              <div class="size-options" role="group" aria-label="Choose size">
+                <button type="button" class="size-button" data-size="S">S</button>
+                <button type="button" class="size-button" data-size="M">M</button>
+                <button type="button" class="size-button" data-size="L">L</button>
+              </div>
+
+              <p id="size-message" class="size-message" aria-live="polite">Please select a size.</p>
+            </div>
+
+            <button id="add-to-cart" class="add-to-cart" type="button">ADD TO CART</button>
+
+            <p id="cart-message" class="cart-message" aria-live="polite"></p>
+          </div>
+        </div>
+
+        <!-- YOU MAY ALSO LIKE CAROUSEL -->
+        <section class="recommendations">
+          <div class="recommendations-heading">
+            <h2>YOU MAY ALSO LIKE</h2>
+
+            <div class="carousel-controls">
+              <button id="carousel-prev" type="button" aria-label="Previous products">←</button>
+              <button id="carousel-next" type="button" aria-label="Next products">→</button>
+            </div>
+          </div>
+
+          <div id="recommendations-track" class="recommendations-track"></div>
+        </section>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="newsletter">
+        <h2>JOIN OUR NEWSLETTER</h2>
+
+        <form class="newsletter-form">
+          <input type="email" placeholder="YOUR EMAIL" aria-label="Your email" required />
+          <button type="submit" aria-label="Subscribe">→</button>
+        </form>
+      </div>
+
+      <div class="socials">
+        <a href="#"><i class="fa-brands fa-tiktok"></i><span>TIKTOK</span></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i><span>INSTAGRAM</span></a>
+        <a href="#"><i class="fa-brands fa-facebook-f"></i><span>FACEBOOK</span></a>
+        <a href="#"><i class="fa-brands fa-pinterest-p"></i><span>PINTEREST</span></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i><span>YOUTUBE</span></a>
+        <a href="#"><i class="fa-brands fa-spotify"></i><span>SPOTIFY</span></a>
+      </div>
+
+      <div class="footer-bottom">
+        <a href="#">COOKIES SETTINGS</a>
+        <a href="#">USE OF AI</a>
+        <a href="#">PRIVACY AND COOKIES POLICY</a>
+        <a href="#">TERMS OF USE</a>
+        <a href="#">LEGAL GUARANTEE</a>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+  </body>
+</html>

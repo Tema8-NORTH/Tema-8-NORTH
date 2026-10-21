@@ -1,27 +1,25 @@
-body{
-background-color: #FCFCFA;
-margin: 0px;
-padding: 0px;
-font-family: helvetica;
+body {
+  background-color: #fcfcfa;
+  margin: 0px;
+  padding: 0px;
+  font-family: helvetica;
 }
 
 @font-face {
-    font-family: helvetica;
-    src: url(../fonts/HelveticaNeue-Medium.otf);
+  font-family: helvetica;
+  src: url(../fonts/HelveticaNeue-Medium.otf);
 }
 
-
-.hero-banner{
-max-width: 100%;
-position: relative;
-
+.hero-banner {
+  max-width: 100%;
+  position: relative;
 }
 
-.hero-banner img{
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-    }
+.hero-banner img {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
 
 .hero-text {
   position: absolute;
@@ -35,7 +33,7 @@ position: relative;
 .btn {
   display: inline-block;
   padding: 15px 35px;
-  background-color: #FCFCFA;
+  background-color: #fcfcfa;
   color: black;
   font-size: 14px;
   text-decoration: none;
@@ -44,15 +42,51 @@ position: relative;
 }
 
 .product-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
 }
 
 .product {
-    border: 1px solid #ddd;
-    padding: 10px;
-    background-color: #fff;
-    border-radius: 4px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 30px 0 0 4%;
+  color: #111;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s ease;
+}
+
+.back-link span {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.back-link:hover {
+  opacity: 0.55;
+}
+.back-link {
+  display: inline-block;
+  margin: 24px 0 0 5%;
+  color: #222;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 12px;
+  letter-spacing: 2px;
+  transition: opacity 0.3s ease;
+}
+
+.back-link:hover {
+  opacity: 0.5;
 }
