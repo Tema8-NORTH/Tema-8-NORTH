@@ -1,4 +1,4 @@
-const API_URL = "https://dummyjson.com/products?limit=0";
+const API_URL = "https://dummyjson.com/products?limit=194";
 
 const SHOP_CATEGORIES = ["mens-shirts", "mens-shoes", "mens-watches", "sunglasses", "tops", "womens-bags", "womens-dresses", "womens-jewellery", "womens-shoes", "womens-watches"];
 
