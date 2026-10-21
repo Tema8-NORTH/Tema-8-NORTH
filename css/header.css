@@ -1,15 +1,12 @@
-
 .header {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   padding: 2rem 2rem 1.5rem;
-  background: #FDFCF9;
+  background: #fdfcf9;
   font-family: sans-serif;
 }
-
-
 
 .header-center {
   display: flex;
@@ -17,7 +14,6 @@
   align-items: center;
   width: 100%;
   max-width: 40%;
-  
 }
 
 .logo-link {
@@ -40,7 +36,6 @@
   margin-top: 0.75rem;
   gap: 0;
   justify-content: space-between;
-
 }
 
 .menu a {
@@ -87,6 +82,8 @@
   background: none;
   border: none;
   cursor: pointer;
+  padding: 8px;
+  z-index: 102;
 }
 
 .burger span {
